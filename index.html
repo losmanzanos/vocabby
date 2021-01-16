@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico"/>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Vocabby</title>
+</head>
+
+<body>
+    <main>
+        <div id="landing">
+            <header class="header">
+                <!-- <img src="images/brain.png" alt="brain" id="logo"> -->
+                <h1 id="app-name">Vocabby</h1>
+            </header>
+            <div class="info center">
+                <p class="description">Vocabby is a quick and easy way to learn new vocabulary. It combines one of the world's smartest dictionaries with visual learning supports that will have you mastering new words in no time!</p>
+            </div>
+            <a>
+                <img src="images/down%20arrow%201.gif" alt="down arrow" id="down-arrow" onclick="goSearch()">
+            </a>
+        </div>
+        
+        <fieldset id="search">
+            <form class="word">
+                <input  id="query" type="text" placeholder= "canine" autocomplete="off" required>
+                <!--Link to Results div...-->
+                <!-- <input id="submit" type="submit" onclick="window.location.href='#results';"> -->
+                <button id="submit" type="submit">Submit</button>
+            </form>
+        </fieldset>
+
+        <div id="results" class="hidden">
+            <div class="loading hidden">
+                <img src="images/loading.gif" alt="loading">
+            </div>
+            <div class="flex-container">
+                <div id="definition" class="hidden"></div>
+                <div id="image" class="hidden"></div>
+            </div>
+            <div id="video" class="hidden"></div>
+            <button id="another-search" onclick="goSearch()">Search Again!</button>
+        </div>
+
+        <div id="contact">
+            <p>Contact me at:<br>
+            <a href="mailto:dahc.reverse@gmail.com?subject=YOU%20ROCK!">dahc.reverse@gmail.com</a></p>
+            <p>My <a href="https://github.com/losmanzanos" target="_blank">GitHub</a> and <a href="https://www.linkedin.com/in/chad-moravec/" target="_blank">LinkedIn</a></p>
+            <br>
+            <a id="rocket">
+                <img id="rocket "src="images/rocket.png" alt="go home" onclick="goHome()">
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© Chad Moravec - <script>document.write( new Date().getFullYear() );</script></p>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
